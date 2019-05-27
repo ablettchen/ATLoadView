@@ -23,7 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = UIColorHex(0xF5F5F5FF);
-    self.title = @"ATToastView";
+    self.title = @"ATLoadView";
     [self.view addSubview:self.tableView];
     self.datas = [NSMutableArray array];
     [self.datas addObjectsFromArray:@[@"Load - Light", \

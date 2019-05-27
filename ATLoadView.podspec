@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
 s.name                    = 'ATLoadView'
-s.version                 = '0.1.0'
-s.summary                 = 'A short description of ATLoadView.'
+s.version                 = '0.1.1'
+s.summary                 = 'Loading View'
 s.homepage                = 'https://github.com/ablettchen/ATLoadView'
 s.license                 = { :type => 'MIT', :file => 'LICENSE' }
 s.author                  = { 'ablett' => 'ablettchen@gmail.com' }

@@ -56,7 +56,7 @@ pod 'ATLoadView'
 
 ## Author
 
-ablettchen@gmail.com, ablett.chen@gmail.com
+ablett, ablett.chen@gmail.com
 
 ## License
 
