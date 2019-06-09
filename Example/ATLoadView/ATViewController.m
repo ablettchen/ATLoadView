@@ -22,15 +22,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.view.backgroundColor = UIColorHex(0xF5F5F5FF);
+    self.view.backgroundColor = UIColorHex(0xF6F6F6A);
     self.title = @"ATLoadView";
     [self.view addSubview:self.tableView];
     self.datas = [NSMutableArray array];
-    [self.datas addObjectsFromArray:@[@"Load - Light", \
+    [self.datas addObjectsFromArray:@[@"Load - Default", \
+                                      @"Load - Light", \
                                       @"Load - Dark", \
                                       @"Load - Gif image"]];
-    
-    //[ATPopupWindow sharedWindow].touchWildToHide = YES;
 }
 
 - (void)viewDidLayoutSubviews {
@@ -86,24 +85,34 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *title = self.datas[indexPath.row];
     
-    if ([title isEqualToString:@"Load - Light"]) {
+    if ([title isEqualToString:@"Load - Default"]) {
         
-        ATLoadView *view = ATLoadView.build.showIn(self.view); // default style is Light
+        ATLoadView *view = [ATLoadView viewWithText:@"LOADING..."];
+        [view showIn:self.view];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [view hide];
+        });
+        
+    }else if ([title isEqualToString:@"Load - Light"]) {
+        
+        ATLoadView *view = [ATLoadView viewWithLightStyle];
+        [view showIn:self.view];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [view hide];
         });
         
     }else if ([title isEqualToString:@"Load - Dark"]) {
         
-        ATLoadView *view = ATLoadView.build.withStyle(ATLoadStyleDark).showIn(self.view);
+        ATLoadView *view = [ATLoadView viewWithDarkStyle];
+        [view showIn:self.view];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [view hide];
         });
         
     }else if ([title isEqualToString:@"Load - Gif image"]) {
-        
-        //ATLoadView *view = ATLoadView.build.withStyle(ATLoadStyleGifImage).showIn(self.view); // default gif image
-        ATLoadView *view = ATLoadView.build.withGifImage([YYImage imageNamed:@"popup_load_balls.gif"]).showIn(self.view);
+
+        ATLoadView *view = [ATLoadView viewWithGifImage:[YYImage imageNamed:@"popup_load_balls.gif"]];
+        [view showIn:self.view];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [view hide];
         });

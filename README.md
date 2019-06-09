@@ -15,10 +15,21 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 #import <ATLoadView/ATLoadView.h>
 ```
 
+* Load - Default 
+
+```objectiveC
+ATLoadView *view = [ATLoadView viewWithText:@"LOADING..."];
+[view showIn:self.view];
+dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    [view hide];
+});
+```
+
 * Load - Light
 
 ```objectiveC
-ATLoadView *view = ATLoadView.build.showIn(self.view); // default style is Light
+ATLoadView *view = [ATLoadView viewWithLightStyle];
+[view showIn:self.view];
 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
     [view hide];
 });
@@ -27,17 +38,18 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), di
 * Load - Dark
 
 ```objectiveC
-ATLoadView *view = ATLoadView.build.withStyle(ATLoadStyleDark).showIn(self.view);
-dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-    [view hide];
-});
+        ATLoadView *view = [ATLoadView viewWithDarkStyle];
+        [view showIn:self.view];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [view hide];
+        });
 ```
 
 * Load - Gif image
 
 ```objectiveC
-//ATLoadView *view = ATLoadView.build.withStyle(ATLoadStyleGifImage).showIn(self.view); // default gif image
-ATLoadView *view = ATLoadView.build.withGifImage([YYImage imageNamed:@"popup_load_balls.gif"]).showIn(self.view);
+ATLoadView *view = [ATLoadView viewWithGifImage:[YYImage imageNamed:@"popup_load_balls.gif"]];
+[view showIn:self.view];
 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
     [view hide];
 });

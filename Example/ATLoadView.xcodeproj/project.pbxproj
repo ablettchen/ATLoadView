@@ -385,7 +385,6 @@
 				"${BUILT_PRODUCTS_DIR}/ATCategories/ATCategories.framework",
 				"${BUILT_PRODUCTS_DIR}/ATLoadView/ATLoadView.framework",
 				"${BUILT_PRODUCTS_DIR}/ATLoadingView/ATLoadingView.framework",
-				"${BUILT_PRODUCTS_DIR}/ATPopupView/ATPopupView.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
 			);
@@ -394,7 +393,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ATCategories.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ATLoadView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ATLoadingView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ATPopupView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
 			);
