@@ -38,11 +38,11 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), di
 * Load - Dark
 
 ```objectiveC
-        ATLoadView *view = [ATLoadView viewWithDarkStyle];
-        [view showIn:self.view];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [view hide];
-        });
+ATLoadView *view = [ATLoadView viewWithDarkStyle];
+[view showIn:self.view];
+dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    [view hide];
+});
 ```
 
 * Load - Gif image
