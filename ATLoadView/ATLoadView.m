@@ -109,7 +109,7 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
 - (void)setupViewIn:(UIView *)view {
     [view addSubview:self.backgroundView];
     [self.backgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(view);
+        make.size.centerX.centerY.equalTo(view);
     }];
     
     [self.backgroundView addSubview:self];
@@ -158,7 +158,7 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
             UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
             [self addSubview:effectView];
             [effectView mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.edges.equalTo(self);
+                make.size.centerX.centerY.equalTo(self);
             }];
             effectView.alpha = 0.5;
             ATLoadingView *lv = [ATLoadingView new];
@@ -178,7 +178,7 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
             UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
             [self addSubview:effectView];
             [effectView mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.edges.equalTo(self);
+                make.size.centerX.centerY.equalTo(self);
             }];
             effectView.alpha = 0.5;
             
@@ -198,7 +198,7 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
             YYAnimatedImageView *imageView = [[YYAnimatedImageView alloc] initWithImage:self.image];
             [self addSubview:imageView];
             [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.edges.equalTo(self).insets(self.conf.insets);
+                make.size.centerX.centerY.equalTo(self).insets(self.conf.insets);
             }];
         }break;
         default:
