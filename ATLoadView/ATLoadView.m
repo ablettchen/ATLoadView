@@ -109,7 +109,8 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
 - (void)setupViewIn:(UIView *)view {
     [view addSubview:self.backgroundView];
     [self.backgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.centerX.centerY.equalTo(view);
+        make.size.equalTo(view);
+        make.center.equalTo(view);
     }];
     
     [self.backgroundView addSubview:self];
@@ -153,12 +154,12 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
         }break;
         case ATLoadStyleLight:{
             self.backgroundColor = self.conf.lightBackgroundColor;
-
+            
             UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
             UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
             [self addSubview:effectView];
             [effectView mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.size.centerX.centerY.equalTo(self);
+                make.edges.equalTo(self);
             }];
             effectView.alpha = 0.5;
             ATLoadingView *lv = [ATLoadingView new];
@@ -178,7 +179,7 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
             UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
             [self addSubview:effectView];
             [effectView mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.size.centerX.centerY.equalTo(self);
+                make.edges.equalTo(self);
             }];
             effectView.alpha = 0.5;
             
@@ -198,7 +199,7 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
             YYAnimatedImageView *imageView = [[YYAnimatedImageView alloc] initWithImage:self.image];
             [self addSubview:imageView];
             [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.size.centerX.centerY.equalTo(self).insets(self.conf.insets);
+                make.edges.equalTo(self).insets(self.conf.insets);
             }];
         }break;
         default:
@@ -286,7 +287,7 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
 - (void)showIn:(UIView *)view {
     [self showIn:view completion:self.didShow];
 }
-    
+
 - (void)show {
     [self show:self.didShow];
 }
