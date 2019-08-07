@@ -223,7 +223,7 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
     self.alpha = 1.0f;
     [self bringSubviewToFront:view];
     @weakify(self);
-    [UIView animateWithDuration:0.3
+    [UIView animateWithDuration:0.25
                           delay:0
                         options:UIViewAnimationOptionCurveEaseOut | UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
@@ -237,7 +237,7 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
 
 - (void)hide:(void(^ __nullable)(BOOL finished))completion {
     @weakify(self);
-    [UIView animateWithDuration:0.3
+    [UIView animateWithDuration:0.0
                           delay:0
                         options: UIViewAnimationOptionCurveEaseIn | UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
