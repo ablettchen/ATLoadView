@@ -236,6 +236,15 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
 }
 
 - (void)hide:(void(^ __nullable)(BOOL finished))completion {
+    
+    self.backgroundView.alpha = 0.001f;
+    self.alpha = 0.001f;
+    [self removeFromSuperview];
+    [self.backgroundView removeFromSuperview];
+    self->_backgroundView = nil;
+    if (completion) {completion(YES);}
+    
+    /*
     @weakify(self);
     [UIView animateWithDuration:0.0
                           delay:0
@@ -254,6 +263,7 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
                          }
                          if (completion) {completion(finished);}
                      }];
+     */
 }
 
 #pragma mark - Public
