@@ -40,6 +40,7 @@ typedef NS_ENUM(NSUInteger, ATLoadStyle) {
 @property (nonatomic, strong, readonly) ATLoadConf *conf;
 @property (nonatomic, strong, readonly) UIView *backgroundView;
 @property (copy, nonatomic) NSString *text;
+@property (assign, nonatomic) BOOL showing;
 @end
 @implementation ATLoadView
 
@@ -70,6 +71,7 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
     if (!self) return nil;
     self.clipsToBounds = YES;
     self.alpha = 0.001f;
+    self.showing = NO;
     self.style = ATLoadStyleLight;
     self.update(^(ATLoadConf * _Nonnull conf) {});
     return self;
@@ -107,6 +109,10 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
 #pragma mark - Privite
 
 - (void)setupViewIn:(UIView *)view {
+    
+    if (self.showing) {return;}
+    self.showing = YES;
+    
     [view addSubview:self.backgroundView];
     [self.backgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.equalTo(view);
@@ -237,33 +243,15 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
 
 - (void)hide:(void(^ __nullable)(BOOL finished))completion {
     
+    if (self.showing == NO) {return;}
+    self.showing = NO;
+    
     self.backgroundView.alpha = 0.001f;
     self.alpha = 0.001f;
     [self removeFromSuperview];
     [self.backgroundView removeFromSuperview];
     self->_backgroundView = nil;
     if (completion) {completion(YES);}
-    
-    /*
-    @weakify(self);
-    [UIView animateWithDuration:0.0
-                          delay:0
-                        options: UIViewAnimationOptionCurveEaseIn | UIViewAnimationOptionBeginFromCurrentState
-                     animations:^{
-                         @strongify(self);
-                         self.backgroundView.alpha = 0.001f;
-                         self.alpha = 0.001f;
-                     }
-                     completion:^(BOOL finished) {
-                         @strongify(self);
-                         if (finished) {
-                             [self removeFromSuperview];
-                             [self.backgroundView removeFromSuperview];
-                             self->_backgroundView = nil;
-                         }
-                         if (completion) {completion(finished);}
-                     }];
-     */
 }
 
 #pragma mark - Public
