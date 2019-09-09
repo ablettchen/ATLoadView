@@ -110,9 +110,6 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
 
 - (void)setupViewIn:(UIView *)view {
     
-    if (self.showing) {return;}
-    self.showing = YES;
-    
     [view addSubview:self.backgroundView];
     [self.backgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.equalTo(view);
@@ -223,6 +220,10 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
 }
 
 - (void)showIn:(UIView *)view completion:(void(^)(BOOL finished))completion {
+    
+    if (self.showing) {return;}
+    self.showing = YES;
+    
     // setup views
     [self setupViewIn:view];
     // show animation
