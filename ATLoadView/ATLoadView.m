@@ -188,7 +188,7 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
             [self addSubview:lv];
             [lv mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.size.mas_equalTo(CGSizeMake(40, 40));
-                make.center.equalTo(self);
+                make.center.equalTo(self).offset(self.conf.offsetY);
             }];
             [lv start];
             
@@ -301,6 +301,7 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
 - (void)reset {
     _size                   = CGSizeMake(80, 80);
     _insets                 = UIEdgeInsetsMake(15, 15, 15, 15);
+    _offsetY                = 0.0f;
     _cornerRadius           = 5.0f;
     _cornerRadius           = 10.f;
     _defaultBackgroundColor = UIColorHex(0x00000000);

@@ -17,7 +17,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class ATLoadConf;
-@interface ATLoadView : UIView
+@interface  ATLoadView : UIView
 
 @property (nonatomic, copy, readonly) void(^update)(void(^block)(ATLoadConf *conf));
 
@@ -38,11 +38,12 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ATLoadConf : NSObject
 
 @property (nonatomic, assign) CGSize size;                      ///< Default is (80, 80).
-@property (nonatomic, assign) UIEdgeInsets insets;              ///< default is UIEdgeInsetsMake(15, 15, 15, 15).
+@property (nonatomic, assign) UIEdgeInsets insets;              ///< Default is UIEdgeInsetsMake(15, 15, 15, 15).
 
+@property (nonatomic, assign) CGFloat offsetY;                  ///< Default is 0.
 @property (nonatomic, assign) CGFloat cornerRadius;             ///< Default is 10.
 
-@property (nonatomic, strong) UIColor *dimBackgroundColor;      ///< default is 0x0000007F
+@property (nonatomic, strong) UIColor *dimBackgroundColor;      ///< Default is 0x0000007F
 @property (nonatomic, strong) UIColor *defaultBackgroundColor;  ///< Default is 0x00000000.
 @property (nonatomic, strong) UIColor *lightBackgroundColor;    ///< Default is 0x00000000.
 @property (nonatomic, strong) UIColor *darkBackgroundColor;     ///< Default is 0x00000080
