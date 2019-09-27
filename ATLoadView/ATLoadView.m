@@ -207,8 +207,6 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
             break;
     }
     
-    self.backgroundView.layer.borderColor = [[UIColor redColor] colorWithAlphaComponent:0.5].CGColor;
-    self.backgroundView.layer.borderWidth = 3;
     [self mas_updateConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.backgroundView);
         make.centerY.equalTo(self.backgroundView).offset(self.conf.offsetY / 2.0);
