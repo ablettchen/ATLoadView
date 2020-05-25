@@ -276,6 +276,10 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
     return view;
 }
 
++ (instancetype)viewWithDefaultGif {
+    return [ATLoadView viewWithGifImage: at_defaultGifImage()];
+}
+
 - (void)showIn:(UIView *)view {
     [self showIn:view completion:self.didShow];
 }

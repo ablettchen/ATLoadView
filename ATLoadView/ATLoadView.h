@@ -28,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)viewWithLightStyle;
 + (instancetype)viewWithDarkStyle;
 + (instancetype)viewWithGifImage:(nullable YYImage *)image;
++ (instancetype)viewWithDefaultGif;
 
 - (void)showIn:(UIView *)view;
 - (void)show;
