@@ -54,7 +54,7 @@ NS_INLINE YYImage *ATLoadViewImageNamed(NSString *imageName) {
 }
 
 NS_INLINE YYImage *at_defaultGifImage(void) {
-    return ATLoadViewImageNamed(@"popup_load_default1.gif");
+    return ATLoadViewImageNamed(@"popup_load_smile.gif");
 }
 
 #pragma mark - Lifcycle

@@ -13,7 +13,6 @@
 		19345531229B171D00F57EF6 /* popup_load_book.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1934552A229B171D00F57EF6 /* popup_load_book.gif */; };
 		19345532229B171D00F57EF6 /* popup_load_fox.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1934552B229B171D00F57EF6 /* popup_load_fox.gif */; };
 		19345533229B171D00F57EF6 /* popup_load_coffee.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1934552C229B171D00F57EF6 /* popup_load_coffee.gif */; };
-		19345534229B171D00F57EF6 /* popup_load_smile.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1934552D229B171D00F57EF6 /* popup_load_smile.gif */; };
 		4DA917E574620E001FC4BC61 /* Pods_ATLoadView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C4061139ABE4BDB11D8E35 /* Pods_ATLoadView_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -51,7 +50,6 @@
 		1934552A229B171D00F57EF6 /* popup_load_book.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = popup_load_book.gif; sourceTree = "<group>"; };
 		1934552B229B171D00F57EF6 /* popup_load_fox.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = popup_load_fox.gif; sourceTree = "<group>"; };
 		1934552C229B171D00F57EF6 /* popup_load_coffee.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = popup_load_coffee.gif; sourceTree = "<group>"; };
-		1934552D229B171D00F57EF6 /* popup_load_smile.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = popup_load_smile.gif; sourceTree = "<group>"; };
 		2A809641F87A243BA3F3CBB6 /* Pods-ATLoadView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATLoadView_Example.release.xcconfig"; path = "Target Support Files/Pods-ATLoadView_Example/Pods-ATLoadView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2AD3FAF3780F18313500C29D /* Pods-ATLoadView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATLoadView_Example.debug.xcconfig"; path = "Target Support Files/Pods-ATLoadView_Example/Pods-ATLoadView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		41C6284302ED3B942D5D4406 /* ATLoadView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ATLoadView.podspec; path = ../ATLoadView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -118,7 +116,6 @@
 				1934552A229B171D00F57EF6 /* popup_load_book.gif */,
 				1934552B229B171D00F57EF6 /* popup_load_fox.gif */,
 				1934552C229B171D00F57EF6 /* popup_load_coffee.gif */,
-				1934552D229B171D00F57EF6 /* popup_load_smile.gif */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -314,7 +311,6 @@
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				19345533229B171D00F57EF6 /* popup_load_coffee.gif in Resources */,
 				1934552E229B171D00F57EF6 /* popup_load_ring.gif in Resources */,
-				19345534229B171D00F57EF6 /* popup_load_smile.gif in Resources */,
 				1934552F229B171D00F57EF6 /* popup_load_default.gif in Resources */,
 				19345531229B171D00F57EF6 /* popup_load_book.gif in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
