@@ -1,8 +1,9 @@
 use_frameworks!
 
-platform :ios, '9.0'
+platform :ios, '10.0'
 
 target 'ATLoadView_Example' do
+  
   pod 'ATLoadView', :path => '../'
-
+  
 end
