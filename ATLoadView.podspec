@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
     
     s.name                    = 'ATLoadView'
-    s.version                 = '0.1.18'
+    s.version                 = '1.0.0'
     s.summary                 = 'ATLoadView.'
     s.description             = "加载指示图"
     s.homepage                = 'https://github.com/ablettchen/ATLoadView'

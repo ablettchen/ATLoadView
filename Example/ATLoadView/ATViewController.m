@@ -110,7 +110,7 @@
         });
         
     }else if ([title isEqualToString:@"Load - Gif image"]) {
-
+        
         ATLoadView *view = [ATLoadView viewWithGifImage:[YYImage imageNamed:@"popup_load_default.gif"]];
         [view showIn:self.view];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

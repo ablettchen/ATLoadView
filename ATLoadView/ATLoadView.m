@@ -230,11 +230,11 @@ NS_INLINE YYImage *at_defaultGifImage(void) {
                           delay:0
                         options:UIViewAnimationOptionCurveEaseOut | UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
-                         @strongify(self);
-                         self.backgroundView.alpha = 1.0f;
-                         self.layer.transform = CATransform3DIdentity;
-                         self.alpha = 1.0f;
-                     }
+        @strongify(self);
+        self.backgroundView.alpha = 1.0f;
+        self.layer.transform = CATransform3DIdentity;
+        self.alpha = 1.0f;
+    }
                      completion:completion];
 }
 
